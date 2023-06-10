@@ -1,6 +1,8 @@
 package Graficos;
 import java.awt.Toolkit;
 import java.awt.Dimension;
+import java.awt.Image;
+
 import javax.swing.JFrame;
 //ManuelMarmol 29579399
 public class CreandoMarcoCentrado {
@@ -9,7 +11,7 @@ public class CreandoMarcoCentrado {
 	MarcoCentrado miMarco = new MarcoCentrado();
 	miMarco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	miMarco.setVisible(true);
-
+miMarco.setTitle("Computacion Grafica");
 	}
 }
 class MarcoCentrado extends JFrame{
@@ -21,5 +23,7 @@ class MarcoCentrado extends JFrame{
 	int anchoPantalla = tamanioPantalla.width;
    setSize(anchoPantalla/2,alturaPantalla/2);	
    setLocation(anchoPantalla/4,alturaPantalla/4);	
+   Image miIcono = miPantalla.getImage("image.jpeg");
+   setIconImage(miIcono);
 	}
 }
